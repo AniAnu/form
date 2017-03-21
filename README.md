@@ -1,1 +1,1 @@
-Dashboard with form builder feature.
+Dashboard with drag and drop form builder feature.
