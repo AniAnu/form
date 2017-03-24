@@ -2,6 +2,15 @@
  * @author v.lugovsky
  * created on 16.12.2015
  */
+var smartTableData_val;
+var userData_val;
+var chartjs_labels = new Array();
+var chartjs_data = new Array();
+
+//smartTableData_val=[{"id":"1","firstName":"asd","lastName":"asd","username":"asd","email":"asd@asd.com","age":"12"},{"id":"2","firstName":"dfg","lastName":"dfg","username":"dfg","email":"dfg@dfg.com","age":"25"},{"id":"3","firstName":"qwe","lastName":"qwe","username":"qwe","email":"qwe@qwe.com","age":"45"}];
+
+datatest();
+
 ! function() {
     "use strict";
 
@@ -1066,605 +1075,172 @@ function() {
     function() {
         "use strict";
 
+
         function e(e, a, t, i) {
-            e.smartTablePageSize = 10, e.smartTableData = [{
-                id: 1,
-                firstName: "Mark",
-                lastName: "Otto",
-                username: "@mdo",
-                email: "mdo@gmail.com",
-                age: "28"
-            }, {
-                id: 2,
-                firstName: "Jacob",
-                lastName: "Thornton",
-                username: "@fat",
-                email: "fat@yandex.ru",
-                age: "45"
-            }, {
-                id: 3,
-                firstName: "Larry",
-                lastName: "Bird",
-                username: "@twitter",
-                email: "twitter@outlook.com",
-                age: "18"
-            }, {
-                id: 4,
-                firstName: "John",
-                lastName: "Snow",
-                username: "@snow",
-                email: "snow@gmail.com",
-                age: "20"
-            }, {
-                id: 5,
-                firstName: "Jack",
-                lastName: "Sparrow",
-                username: "@jack",
-                email: "jack@yandex.ru",
-                age: "30"
-            }, {
-                id: 6,
-                firstName: "Ann",
-                lastName: "Smith",
-                username: "@ann",
-                email: "ann@gmail.com",
-                age: "21"
-            }, {
-                id: 7,
-                firstName: "Barbara",
-                lastName: "Black",
-                username: "@barbara",
-                email: "barbara@yandex.ru",
-                age: "43"
-            }, {
-                id: 8,
-                firstName: "Sevan",
-                lastName: "Bagrat",
-                username: "@sevan",
-                email: "sevan@outlook.com",
-                age: "13"
-            }, {
-                id: 9,
-                firstName: "Ruben",
-                lastName: "Vardan",
-                username: "@ruben",
-                email: "ruben@gmail.com",
-                age: "22"
-            }, {
-                id: 10,
-                firstName: "Karen",
-                lastName: "Sevan",
-                username: "@karen",
-                email: "karen@yandex.ru",
-                age: "33"
-            }, {
-                id: 11,
-                firstName: "Mark",
-                lastName: "Otto",
-                username: "@mark",
-                email: "mark@gmail.com",
-                age: "38"
-            }, {
-                id: 12,
-                firstName: "Jacob",
-                lastName: "Thornton",
-                username: "@jacob",
-                email: "jacob@yandex.ru",
-                age: "48"
-            }, {
-                id: 13,
-                firstName: "Haik",
-                lastName: "Hakob",
-                username: "@haik",
-                email: "haik@outlook.com",
-                age: "48"
-            }, {
-                id: 14,
-                firstName: "Garegin",
-                lastName: "Jirair",
-                username: "@garegin",
-                email: "garegin@gmail.com",
-                age: "40"
-            }, {
-                id: 15,
-                firstName: "Krikor",
-                lastName: "Bedros",
-                username: "@krikor",
-                email: "krikor@yandex.ru",
-                age: "32"
-            }, {
-                id: 16,
-                firstName: "Francisca",
-                lastName: "Brady",
-                username: "@Gibson",
-                email: "franciscagibson@comtours.com",
-                age: 11
-            }, {
-                id: 17,
-                firstName: "Tillman",
-                lastName: "Figueroa",
-                username: "@Snow",
-                email: "tillmansnow@comtours.com",
-                age: 34
-            }, {
-                id: 18,
-                firstName: "Jimenez",
-                lastName: "Morris",
-                username: "@Bryant",
-                email: "jimenezbryant@comtours.com",
-                age: 45
-            }, {
-                id: 19,
-                firstName: "Sandoval",
-                lastName: "Jacobson",
-                username: "@Mcbride",
-                email: "sandovalmcbride@comtours.com",
-                age: 32
-            }, {
-                id: 20,
-                firstName: "Griffin",
-                lastName: "Torres",
-                username: "@Charles",
-                email: "griffincharles@comtours.com",
-                age: 19
-            }, {
-                id: 21,
-                firstName: "Cora",
-                lastName: "Parker",
-                username: "@Caldwell",
-                email: "coracaldwell@comtours.com",
-                age: 27
-            }, {
-                id: 22,
-                firstName: "Cindy",
-                lastName: "Bond",
-                username: "@Velez",
-                email: "cindyvelez@comtours.com",
-                age: 24
-            }, {
-                id: 23,
-                firstName: "Frieda",
-                lastName: "Tyson",
-                username: "@Craig",
-                email: "friedacraig@comtours.com",
-                age: 45
-            }, {
-                id: 24,
-                firstName: "Cote",
-                lastName: "Holcomb",
-                username: "@Rowe",
-                email: "coterowe@comtours.com",
-                age: 20
-            }, {
-                id: 25,
-                firstName: "Trujillo",
-                lastName: "Mejia",
-                username: "@Valenzuela",
-                email: "trujillovalenzuela@comtours.com",
-                age: 16
-            }, {
-                id: 26,
-                firstName: "Pruitt",
-                lastName: "Shepard",
-                username: "@Sloan",
-                email: "pruittsloan@comtours.com",
-                age: 44
-            }, {
-                id: 27,
-                firstName: "Sutton",
-                lastName: "Ortega",
-                username: "@Black",
-                email: "suttonblack@comtours.com",
-                age: 42
-            }, {
-                id: 28,
-                firstName: "Marion",
-                lastName: "Heath",
-                username: "@Espinoza",
-                email: "marionespinoza@comtours.com",
-                age: 47
-            }, {
-                id: 29,
-                firstName: "Newman",
-                lastName: "Hicks",
-                username: "@Keith",
-                email: "newmankeith@comtours.com",
-                age: 15
-            }, {
-                id: 30,
-                firstName: "Boyle",
-                lastName: "Larson",
-                username: "@Summers",
-                email: "boylesummers@comtours.com",
-                age: 32
-            }, {
-                id: 31,
-                firstName: "Haynes",
-                lastName: "Vinson",
-                username: "@Mckenzie",
-                email: "haynesmckenzie@comtours.com",
-                age: 15
-            }, {
-                id: 32,
-                firstName: "Miller",
-                lastName: "Acosta",
-                username: "@Young",
-                email: "milleryoung@comtours.com",
-                age: 55
-            }, {
-                id: 33,
-                firstName: "Johnston",
-                lastName: "Brown",
-                username: "@Knight",
-                email: "johnstonknight@comtours.com",
-                age: 29
-            }, {
-                id: 34,
-                firstName: "Lena",
-                lastName: "Pitts",
-                username: "@Forbes",
-                email: "lenaforbes@comtours.com",
-                age: 25
-            }, {
-                id: 35,
-                firstName: "Terrie",
-                lastName: "Kennedy",
-                username: "@Branch",
-                email: "terriebranch@comtours.com",
-                age: 37
-            }, {
-                id: 36,
-                firstName: "Louise",
-                lastName: "Aguirre",
-                username: "@Kirby",
-                email: "louisekirby@comtours.com",
-                age: 44
-            }, {
-                id: 37,
-                firstName: "David",
-                lastName: "Patton",
-                username: "@Sanders",
-                email: "davidsanders@comtours.com",
-                age: 26
-            }, {
-                id: 38,
-                firstName: "Holden",
-                lastName: "Barlow",
-                username: "@Mckinney",
-                email: "holdenmckinney@comtours.com",
-                age: 11
-            }, {
-                id: 39,
-                firstName: "Baker",
-                lastName: "Rivera",
-                username: "@Montoya",
-                email: "bakermontoya@comtours.com",
-                age: 47
-            }, {
-                id: 40,
-                firstName: "Belinda",
-                lastName: "Lloyd",
-                username: "@Calderon",
-                email: "belindacalderon@comtours.com",
-                age: 21
-            }, {
-                id: 41,
-                firstName: "Pearson",
-                lastName: "Patrick",
-                username: "@Clements",
-                email: "pearsonclements@comtours.com",
-                age: 42
-            }, {
-                id: 42,
-                firstName: "Alyce",
-                lastName: "Mckee",
-                username: "@Daugherty",
-                email: "alycedaugherty@comtours.com",
-                age: 55
-            }, {
-                id: 43,
-                firstName: "Valencia",
-                lastName: "Spence",
-                username: "@Olsen",
-                email: "valenciaolsen@comtours.com",
-                age: 20
-            }, {
-                id: 44,
-                firstName: "Leach",
-                lastName: "Holcomb",
-                username: "@Humphrey",
-                email: "leachhumphrey@comtours.com",
-                age: 28
-            }, {
-                id: 45,
-                firstName: "Moss",
-                lastName: "Baxter",
-                username: "@Fitzpatrick",
-                email: "mossfitzpatrick@comtours.com",
-                age: 51
-            }, {
-                id: 46,
-                firstName: "Jeanne",
-                lastName: "Cooke",
-                username: "@Ward",
-                email: "jeanneward@comtours.com",
-                age: 59
-            }, {
-                id: 47,
-                firstName: "Wilma",
-                lastName: "Briggs",
-                username: "@Kidd",
-                email: "wilmakidd@comtours.com",
-                age: 53
-            }, {
-                id: 48,
-                firstName: "Beatrice",
-                lastName: "Perry",
-                username: "@Gilbert",
-                email: "beatricegilbert@comtours.com",
-                age: 39
-            }, {
-                id: 49,
-                firstName: "Whitaker",
-                lastName: "Hyde",
-                username: "@Mcdonald",
-                email: "whitakermcdonald@comtours.com",
-                age: 35
-            }, {
-                id: 50,
-                firstName: "Rebekah",
-                lastName: "Duran",
-                username: "@Gross",
-                email: "rebekahgross@comtours.com",
-                age: 40
-            }, {
-                id: 51,
-                firstName: "Earline",
-                lastName: "Mayer",
-                username: "@Woodward",
-                email: "earlinewoodward@comtours.com",
-                age: 52
-            }, {
-                id: 52,
-                firstName: "Moran",
-                lastName: "Baxter",
-                username: "@Johns",
-                email: "moranjohns@comtours.com",
-                age: 20
-            }, {
-                id: 53,
-                firstName: "Nanette",
-                lastName: "Hubbard",
-                username: "@Cooke",
-                email: "nanettecooke@comtours.com",
-                age: 55
-            }, {
-                id: 54,
-                firstName: "Dalton",
-                lastName: "Walker",
-                username: "@Hendricks",
-                email: "daltonhendricks@comtours.com",
-                age: 25
-            }, {
-                id: 55,
-                firstName: "Bennett",
-                lastName: "Blake",
-                username: "@Pena",
-                email: "bennettpena@comtours.com",
-                age: 13
-            }, {
-                id: 56,
-                firstName: "Kellie",
-                lastName: "Horton",
-                username: "@Weiss",
-                email: "kellieweiss@comtours.com",
-                age: 48
-            }, {
-                id: 57,
-                firstName: "Hobbs",
-                lastName: "Talley",
-                username: "@Sanford",
-                email: "hobbssanford@comtours.com",
-                age: 28
-            }, {
-                id: 58,
-                firstName: "Mcguire",
-                lastName: "Donaldson",
-                username: "@Roman",
-                email: "mcguireroman@comtours.com",
-                age: 38
-            }, {
-                id: 59,
-                firstName: "Rodriquez",
-                lastName: "Saunders",
-                username: "@Harper",
-                email: "rodriquezharper@comtours.com",
-                age: 20
-            }, {
-                id: 60,
-                firstName: "Lou",
-                lastName: "Conner",
-                username: "@Sanchez",
-                email: "lousanchez@comtours.com",
-                age: 16
-            }], e.editableTableData = e.smartTableData.slice(0, 36), e.peopleTableData = [{
-                id: 1,
-                firstName: "Mark",
-                lastName: "Otto",
-                username: "@mdo",
-                email: "mdo@gmail.com",
-                age: "28",
-                status: "info"
-            }, {
-                id: 2,
-                firstName: "Jacob",
-                lastName: "Thornton",
-                username: "@fat",
-                email: "fat@yandex.ru",
-                age: "45",
-                status: "primary"
-            }, {
-                id: 3,
-                firstName: "Larry",
-                lastName: "Bird",
-                username: "@twitter",
-                email: "twitter@outlook.com",
-                age: "18",
-                status: "success"
-            }, {
-                id: 4,
-                firstName: "John",
-                lastName: "Snow",
-                username: "@snow",
-                email: "snow@gmail.com",
-                age: "20",
-                status: "danger"
-            }, {
-                id: 5,
-                firstName: "Jack",
-                lastName: "Sparrow",
-                username: "@jack",
-                email: "jack@yandex.ru",
-                age: "30",
-                status: "warning"
-            }], e.metricsTableData = [{
-                image: "app/browsers/chrome.svg",
-                browser: "Google Chrome",
-                visits: "10,392",
-                isVisitsUp: !0,
-                purchases: "4,214",
-                isPurchasesUp: !0,
-                percent: "45%",
-                isPercentUp: !0
-            }, {
-                image: "app/browsers/firefox.svg",
-                browser: "Mozilla Firefox",
-                visits: "7,873",
-                isVisitsUp: !0,
-                purchases: "3,031",
-                isPurchasesUp: !1,
-                percent: "28%",
-                isPercentUp: !0
-            }, {
-                image: "app/browsers/ie.svg",
-                browser: "Internet Explorer",
-                visits: "5,890",
-                isVisitsUp: !1,
-                purchases: "2,102",
-                isPurchasesUp: !1,
-                percent: "17%",
-                isPercentUp: !1
-            }, {
-                image: "app/browsers/safari.svg",
-                browser: "Safari",
-                visits: "4,001",
-                isVisitsUp: !1,
-                purchases: "1,001",
-                isPurchasesUp: !1,
-                percent: "14%",
-                isPercentUp: !0
-            }, {
-                image: "app/browsers/opera.svg",
-                browser: "Opera",
-                visits: "1,833",
-                isVisitsUp: !0,
-                purchases: "83",
-                isPurchasesUp: !0,
-                percent: "5%",
-                isPercentUp: !1
-            }], e.users = [{
-                id: 1,
-                name: "Esther Vang",
-                status: 4,
-                group: 3
-            }, {
-                id: 2,
-                name: "Leah Freeman",
-                status: 3,
-                group: 1
-            }, {
-                id: 3,
-                name: "Mathews Simpson",
-                status: 3,
-                group: 2
-            }, {
-                id: 4,
-                name: "Buckley Hopkins",
-                group: 4
-            }, {
-                id: 5,
-                name: "Buckley Schwartz",
-                status: 1,
-                group: 1
-            }, {
-                id: 6,
-                name: "Mathews Hopkins",
-                status: 4,
-                group: 2
-            }, {
-                id: 7,
-                name: "Leah Vang",
-                status: 4,
-                group: 1
-            }, {
-                id: 8,
-                name: "Vang Schwartz",
-                status: 4,
-                group: 2
-            }, {
-                id: 9,
-                name: "Hopkin Esther",
-                status: 1,
-                group: 2
-            }, {
-                id: 10,
-                name: "Mathews Schwartz",
-                status: 1,
-                group: 3
-            }], e.statuses = [{
-                value: 1,
-                text: "Good"
-            }, {
-                value: 2,
-                text: "Awesome"
-            }, {
-                value: 3,
-                text: "Excellent"
-            }], e.groups = [{
-                id: 1,
-                text: "user"
-            }, {
-                id: 2,
-                text: "customer"
-            }, {
-                id: 3,
-                text: "vip"
-            }, {
-                id: 4,
-                text: "admin"
-            }], e.showGroup = function(t) {
-                if (t.group && e.groups.length) {
-                    var i = a("filter")(e.groups, {
-                        id: t.group
-                    });
-                    return i.length ? i[0].text : "Not set"
-                }
-                return "Not set"
-            }, e.showStatus = function(t) {
-                var i = [];
-                return t.status && (i = a("filter")(e.statuses, {
-                    value: t.status
-                })), i.length ? i[0].text : "Not set"
-            }, e.removeUser = function(a) {
-                e.users.splice(a, 1)
-            }, e.addUser = function() {
-                e.inserted = {
-                    id: e.users.length + 1,
-                    name: "",
-                    status: null,
-                    group: null
-                }, e.users.push(e.inserted)
-            }, t.theme = "bs3", i.bs3.submitTpl = '<button type="submit" class="btn btn-primary btn-with-icon"><i class="ion-checkmark-round"></i></button>', i.bs3.cancelTpl = '<button type="button" ng-click="$form.$cancel()" class="btn btn-default btn-with-icon"><i class="ion-close-round"></i></button>'
+            e.smartTablePageSize = 10,
+                e.smartTableData = smartTableData_val,
+                e.editableTableData = e.smartTableData.slice(0, 36), e.peopleTableData = [{
+                    id: 1,
+                    firstName: "Mark",
+                    lastName: "Otto",
+                    username: "@mdo",
+                    email: "mdo@gmail.com",
+                    age: "28",
+                    status: "info"
+                }, {
+                    id: 2,
+                    firstName: "Jacob",
+                    lastName: "Thornton",
+                    username: "@fat",
+                    email: "fat@yandex.ru",
+                    age: "45",
+                    status: "primary"
+                }, {
+                    id: 3,
+                    firstName: "Larry",
+                    lastName: "Bird",
+                    username: "@twitter",
+                    email: "twitter@outlook.com",
+                    age: "18",
+                    status: "success"
+                }, {
+                    id: 4,
+                    firstName: "John",
+                    lastName: "Snow",
+                    username: "@snow",
+                    email: "snow@gmail.com",
+                    age: "20",
+                    status: "danger"
+                }, {
+                    id: 5,
+                    firstName: "Jack",
+                    lastName: "Sparrow",
+                    username: "@jack",
+                    email: "jack@yandex.ru",
+                    age: "30",
+                    status: "warning"
+                }],
+                e.metricsTableData = [{
+                    image: "app/browsers/chrome.svg",
+                    browser: "Google Chrome",
+                    visits: "10,392",
+                    isVisitsUp: !0,
+                    purchases: "4,214",
+                    isPurchasesUp: !0,
+                    percent: "45%",
+                    isPercentUp: !0
+                }, {
+                    image: "app/browsers/firefox.svg",
+                    browser: "Mozilla Firefox",
+                    visits: "7,873",
+                    isVisitsUp: !0,
+                    purchases: "3,031",
+                    isPurchasesUp: !1,
+                    percent: "28%",
+                    isPercentUp: !0
+                }, {
+                    image: "app/browsers/ie.svg",
+                    browser: "Internet Explorer",
+                    visits: "5,890",
+                    isVisitsUp: !1,
+                    purchases: "2,102",
+                    isPurchasesUp: !1,
+                    percent: "17%",
+                    isPercentUp: !1
+                }, {
+                    image: "app/browsers/safari.svg",
+                    browser: "Safari",
+                    visits: "4,001",
+                    isVisitsUp: !1,
+                    purchases: "1,001",
+                    isPurchasesUp: !1,
+                    percent: "14%",
+                    isPercentUp: !0
+                }, {
+                    image: "app/browsers/opera.svg",
+                    browser: "Opera",
+                    visits: "1,833",
+                    isVisitsUp: !0,
+                    purchases: "83",
+                    isPurchasesUp: !0,
+                    percent: "5%",
+                    isPercentUp: !1
+                }],
+                //e.users=userData_val[{id:1,name:"Esther Vang",status:4,group:3},{id:2,name:"Leah Freeman",status:3,group:1},{id:3,name:"Mathews Simpson",status:3,group:2},{id:4,name:"Buckley Hopkins",group:4},{id:5,name:"Buckley Schwartz",status:1,group:1},{id:6,name:"Mathews Hopkins",status:4,group:2},{id:7,name:"Leah Vang",status:4,group:1},{id:8,name:"Vang Schwartz",status:4,group:2},{id:9,name:"Hopkin Esther",status:1,group:2},{id:10,name:"Mathews Schwartz",status:1,group:3}],
+                e.users = userData_val,
+
+                e.statuses = [{
+                    value: 1,
+                    text: "Good"
+                }, {
+                    value: 2,
+                    text: "Awesome"
+                }, {
+                    value: 3,
+                    text: "Excellent"
+                }],
+                e.groups = [{
+                    id: 1,
+                    text: "user"
+                }, {
+                    id: 2,
+                    text: "customer"
+                }, {
+                    id: 3,
+                    text: "vip"
+                }, {
+                    id: 4,
+                    text: "admin"
+                }],
+                e.showGroup = function(t) {
+                    if (t.group && e.groups.length) {
+                        var i = a("filter")(e.groups, {
+                            id: t.group
+                        });
+                        return i.length ? i[0].text : "Not set"
+                    }
+                    return "Not set"
+                },
+                e.showStatus = function(t) {
+                    var i = [];
+                    return t.status && (i = a("filter")(e.statuses, {
+                        value: t.status
+                    })), i.length ? i[0].text : "Not set"
+                },
+                e.removeUser = function(a) {
+                    e.users.splice(a, 1);
+
+                    setTimeout(function() {
+
+                        var str_json = JSON.stringify(e.users);
+                        $.post("scripts/Update.php", {
+                            data: str_json
+                        }, function(result) {}, 'json');
+                    }, 3000);
+                },
+                e.UpdateUser = function(a) {
+                    //rowform.submit();
+                    setTimeout(function() {
+
+                        var str_json = JSON.stringify(e.users);
+                        $.post("scripts/Update.php", {
+                            data: str_json
+                        }, function(result) {}, 'json');
+                    }, 3000);
+
+                },
+                e.addUser = function() {
+                    e.inserted = {
+                            id: e.users.length + 1,
+                            name: "",
+                            status: null,
+                            group: null
+                        },
+                        e.users.push(e.inserted)
+                },
+                t.theme = "bs3",
+                i.bs3.submitTpl = '<button type="submit" class="btn btn-primary btn-with-icon"><i class="ion-checkmark-round"></i></button>',
+                i.bs3.cancelTpl = '<button type="button" ng-click="$form.$cancel()" class="btn btn-default btn-with-icon"><i class="ion-close-round"></i></button>'
         }
         e.$inject = ["$scope", "$filter", "editableOptions", "editableThemes"], angular.module("BlurAdmin.pages.tables").controller("TablesPageCtrl", e)
     }(),
@@ -2256,22 +1832,32 @@ function() {
                 return e
             }
             var i = a.colors;
-            e.labels = ["Sleeping", "Designing", "Coding", "Cycling"], e.data = [20, 40, 5, 35], e.options = {
-                elements: {
-                    arc: {
-                        borderWidth: 0
+
+            ///cart.js
+            //e.labels=["Sleeping","Designing","Coding","Cycling"],
+            //e.data=[20,40,5,35],
+
+            e.labels = chartjs_labels,
+                e.data = chartjs_data,
+
+
+
+                e.options = {
+                    elements: {
+                        arc: {
+                            borderWidth: 0
+                        }
+                    },
+                    legend: {
+                        display: !0,
+                        position: "bottom",
+                        labels: {
+                            fontColor: i.defaultText
+                        }
                     }
-                },
-                legend: {
-                    display: !0,
-                    position: "bottom",
-                    labels: {
-                        fontColor: i.defaultText
-                    }
+                }, e.changeData = function() {
+                    e.data = t(e.data)
                 }
-            }, e.changeData = function() {
-                e.data = t(e.data)
-            }
         }
         e.$inject = ["$scope", "baConfig"], angular.module("BlurAdmin.pages.charts.chartJs").controller("chartJs1DCtrl", e)
     }(),
@@ -3645,29 +3231,35 @@ function() {
                 })
             }
             var n = i.hexToRGB(t.colors.defaultText, .2);
+
+
             e.charts = [{
-                color: n,
-                description: "New Visits",
-                stats: "57,820",
-                icon: "person"
-            }, {
-                color: n,
-                description: "Purchases",
-                stats: "$ 89,745",
-                icon: "money"
-            }, {
-                color: n,
-                description: "Active Users",
-                stats: "178,391",
-                icon: "face"
-            }, {
-                color: n,
-                description: "Returned",
-                stats: "32,592",
-                icon: "refresh"
-            }], a(function() {
-                l(), o()
-            }, 1e3)
+                    color: n,
+                    description: "New Visits",
+                    stats: "57,820",
+                    icon: "person"
+                }, {
+                    color: n,
+                    description: "Purchases",
+                    stats: "$ 89,745",
+                    icon: "money"
+                }, {
+                    color: n,
+                    description: "Active Users",
+                    stats: "178,391",
+                    icon: "face"
+                }, {
+                    color: n,
+                    description: "Returned",
+                    stats: "32,592",
+                    icon: "refresh"
+                }],
+
+
+
+                a(function() {
+                    l(), o()
+                }, 1e3)
         }
         e.$inject = ["$scope", "$timeout", "baConfig", "baUtil"], angular.module("BlurAdmin.pages.dashboard").controller("DashboardPieChartCtrl", e)
     }(),
@@ -6726,10 +6318,13 @@ function() {
         function e(e, a, t, i) {
             var s = a.colors,
                 l = t[0].getAttribute("id");
+
+
             AmCharts.makeChart(l, {
                 type: "serial",
                 theme: "blur",
                 color: s.defaultText,
+
                 dataProvider: [{
                     country: "USA",
                     visits: 3025,
@@ -6790,6 +6385,8 @@ function() {
                 pathToImages: i.images.amChart
             })
         }
+
+
         e.$inject = ["$scope", "baConfig", "$element", "layoutPaths"], angular.module("BlurAdmin.pages.charts.amCharts").controller("BarChartCtrl", e)
     }(),
     function() {
@@ -6805,6 +6402,10 @@ function() {
                     type: "serial",
                     theme: "blur",
                     color: l.defaultText,
+
+
+
+
                     dataProvider: [{
                         lineColor: l.info,
                         date: "2012-01-01",
@@ -7609,6 +7210,9 @@ function() {
                     creditsPosition: "bottom-right",
                     pathToImages: i.images.amChart
                 });
+
+
+
             n.addListener("rendered", s), n.zoomChart && n.zoomChart()
         }
         e.$inject = ["$scope", "baConfig", "$element", "layoutPaths"], angular.module("BlurAdmin.pages.charts.amCharts").controller("LineChartCtrl", e)
@@ -7662,6 +7266,7 @@ function() {
                             }
                         }]
                     },
+
                     dataProvider: [{
                         country: "Lithuania",
                         litres: 501.9
@@ -8160,8 +7765,10 @@ function() {
         }
         angular.module("BlurAdmin.pages.form").directive("tagInput", e)
     }(), angular.module("BlurAdmin").run(["$templateCache", function(e) {
-        e.put("app/pages/dashboard/dashboard.html", '<dashboard-pie-chart></dashboard-pie-chart><div class="row"><div class="col-lg-6 col-md-12 col-sm-12" ba-panel="" ba-panel-title="Acquisition Channels" ba-panel-class="medium-panel traffic-panel"><traffic-chart></traffic-chart></div><div class="col-lg-6 col-md-12 col-sm-12" ba-panel="" ba-panel-title="Users by Country" ba-panel-class="medium-panel"><dashboard-map></dashboard-map></div></div><div class="row"><div class="col-xlg-9 col-lg-6 col-md-6 col-sm-12 col-xs-12"><div class="row"><div class="col-xlg-8 col-lg-12 col-md-12 col-sm-7 col-xs-12" ba-panel="" ba-panel-title="Revenue" ba-panel-class="medium-panel"><dashboard-line-chart></dashboard-line-chart></div><div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel="" ba-panel-class="popular-app medium-panel"><popular-app></popular-app></div></div></div><div class="col-xlg-3 col-lg-6 col-md-6 col-sm-12 col-xs-12" ba-panel="" ba-panel-title="Feed" ba-panel-class="large-panel with-scroll feed-panel"><blur-feed></blur-feed></div></div><div class="row shift-up"><div class="col-xlg-3 col-lg-6 col-md-6 col-xs-12" ba-panel="" ba-panel-title="To Do List" ba-panel-class="xmedium-panel feed-comply-panel with-scroll todo-panel"><dashboard-todo></dashboard-todo></div><div class="col-xlg-6 col-lg-6 col-md-6 col-xs-12" ba-panel="" ba-panel-title="Calendar" ba-panel-class="xmedium-panel feed-comply-panel with-scroll calendar-panel"><dashboard-calendar></dashboard-calendar></div></div>'),
 
+
+
+        e.put("app/pages/dashboard/dashboard.html", '<dashboard-pie-chart></dashboard-pie-chart><div class="row"><div class="col-lg-6 col-md-12 col-sm-12" ba-panel="" ba-panel-title="Acquisition Channels" ba-panel-class="medium-panel traffic-panel"><traffic-chart></traffic-chart></div><div class="col-lg-6 col-md-12 col-sm-12" ba-panel="" ba-panel-title="Users by Country" ba-panel-class="medium-panel"><dashboard-map></dashboard-map></div></div><div class="row"><div class="col-xlg-9 col-lg-6 col-md-6 col-sm-12 col-xs-12"><div class="row"><div class="col-xlg-8 col-lg-12 col-md-12 col-sm-7 col-xs-12" ba-panel="" ba-panel-title="Revenue" ba-panel-class="medium-panel"><dashboard-line-chart></dashboard-line-chart></div><div class="col-xlg-4 col-lg-12 col-md-12 col-sm-5 col-xs-12" ba-panel="" ba-panel-class="popular-app medium-panel"><popular-app></popular-app></div></div></div><div class="col-xlg-3 col-lg-6 col-md-6 col-sm-12 col-xs-12" ba-panel="" ba-panel-title="Feed" ba-panel-class="large-panel with-scroll feed-panel"><blur-feed></blur-feed></div></div><div class="row shift-up"><div class="col-xlg-3 col-lg-6 col-md-6 col-xs-12" ba-panel="" ba-panel-title="To Do List" ba-panel-class="xmedium-panel feed-comply-panel with-scroll todo-panel"><dashboard-todo></dashboard-todo></div><div class="col-xlg-6 col-lg-6 col-md-6 col-xs-12" ba-panel="" ba-panel-title="Calendar" ba-panel-class="xmedium-panel feed-comply-panel with-scroll calendar-panel"><dashboard-calendar></dashboard-calendar></div></div>'),
 
 
 
@@ -8208,13 +7815,20 @@ function() {
             e.put("app/pages/maps/leaflet/leaflet.html", '<div ba-panel="" ba-panel-title="Leaflet" class="viewport100"><div id="leaflet-map"></div></div>'),
             e.put("app/pages/maps/map-bubbles/map-bubbles.html", '<div ba-panel="" ba-panel-title="Map with Bubbles" class="viewport100"><div id="map-bubbles"></div></div>'),
             e.put("app/pages/maps/map-lines/map-lines.html", '<div ba-panel="" ba-panel-title="Line Map" class="viewport100"><div id="map-lines"></div></div>'),
-            e.put("app/pages/tables/basic/tables.html", '<div class="widgets"><div class="row"><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Hover Rows" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/hoverRows.html"></div></div></div><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Bordered Table" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/borderedTable.html"></div></div></div></div><div class="row"><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Condensed Table" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/condensedTable.html"></div></div></div><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Striped Rows" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/stripedRows.html"></div></div></div></div><div class="row"><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Contextual Table" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/contextualTable.html"></div></div></div><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Responsive Table" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/responsiveTable.html"></div></div></div></div></div>'),
+            e.put("app/pages/tables/basic/tables.html", '<div class="widgets"><div class="row"><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Hover Rows" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/hoverRows.html"></div></div></div><div class="col-lg-6 col-md-12"><div ba-panel="" ng-click="<script>alert("123");</script>" ba-panel-title="Bordered Table" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/borderedTable.html"></div></div></div></div><div class="row"><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Condensed Table" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/condensedTable.html"></div></div></div><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Striped Rows" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/stripedRows.html"></div></div></div></div><div class="row"><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Contextual Table" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/contextualTable.html"></div></div></div><div class="col-lg-6 col-md-12"><div ba-panel="" ba-panel-title="Responsive Table" ba-panel-class="with-scroll table-panel"><div include-with-scope="app/pages/tables/widgets/responsiveTable.html"></div></div></div></div></div>'),
             e.put("app/pages/tables/smart/tables.html", '<div class="widgets"><div class="row"><div class="col-md-12"><div ba-panel="" ba-panel-title="Editable Rows" ba-panel-class="with-scroll"><div include-with-scope="app/pages/tables/widgets/editableRowTable.html"></div></div></div></div><div class="row"><div class="col-md-12"><div ba-panel="" ba-panel-title="Editable Cells" ba-panel-class="with-scroll"><div include-with-scope="app/pages/tables/widgets/editableTable.html"></div></div></div></div><div class="row"><div class="col-md-12"><div ba-panel="" ba-panel-title="Smart Table With Filtering, Sorting And Pagination" ba-panel-class="with-scroll"><div include-with-scope="app/pages/tables/widgets/smartTable.html"></div></div></div></div></div>'),
+
+
+
             e.put("app/pages/tables/widgets/basicTable.html", '<div class="horizontal-scroll"><table class="table"><thead><tr><th class="browser-icons"></th><th>Browser</th><th class="align-right">Visits</th><th class="table-arr"></th><th class="align-right">Downloads</th><th class="table-arr"></th><th class="align-right">Purchases</th><th class="table-arr"></th><th class="align-right">DAU</th><th class="table-arr"></th><th class="align-right">MAU</th><th class="table-arr"></th><th class="align-right">LTV</th><th class="table-arr"></th><th class="align-right">Users %</th><th class="table-arr"></th></tr></thead><tbody><tr><td><img src="img/chrome.svg" width="20" height="20"></td><td class="nowrap">Google Chrome</td><td class="align-right">10,392</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">3,822</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">4,214</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">899</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">7,098</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">178</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">45%</td><td class="table-arr"><i class="icon-up"></i></td></tr><tr><td><img src="img/firefox.svg" width="20" height="20"></td><td class="nowrap">Mozilla Firefox</td><td class="align-right">7,873</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">6,003</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">3,031</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">897</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">8,997</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">102</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">28%</td><td class="table-arr"><i class="icon-up"></i></td></tr><tr><td><img src="img/ie.svg" width="20" height="20"></td><td class="nowrap">Internet Explorer</td><td class="align-right">5,890</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">3,492</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">2,102</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">27</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">4,039</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">99</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">17%</td><td class="table-arr"><i class="icon-down"></i></td></tr><tr><td><img src="img/safari.svg" width="20" height="20"></td><td class="nowrap">Safari</td><td class="align-right">4,001</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">2,039</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">1,001</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">104</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">3,983</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">209</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">14%</td><td class="table-arr"><i class="icon-down"></i></td></tr><tr><td><img src="img/opera.svg" width="20" height="20"></td><td class="nowrap">Opera</td><td class="align-right">1,833</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">983</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">83</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">19</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">1,099</td><td class="table-arr"><i class="icon-down"></i></td><td class="align-right">103</td><td class="table-arr"><i class="icon-up"></i></td><td class="align-right">5%</td><td class="table-arr"><i class="icon-up"></i></td></tr></tbody></table></div>'),
             e.put("app/pages/tables/widgets/borderedTable.html", '<div class="horizontal-scroll"><table class="table table-bordered"><thead><tr><th class="browser-icons"></th><th>Browser</th><th class="align-right">Visits</th><th class="align-right">Purchases</th><th class="align-right">%</th></tr></thead><tbody><tr ng-repeat="item in metricsTableData"><td><img ng-src="{{::( item.image | appImage )}}" width="20" height="20"></td><td ng-class="nowrap">{{item.browser}}</td><td class="align-right">{{item.visits}}</td><td class="align-right">{{item.purchases}}</td><td class="align-right">{{item.percent}}</td></tr></tbody></table></div>'),
             e.put("app/pages/tables/widgets/condensedTable.html", '<div class="horizontal-scroll"><table class="table table-condensed"><thead><tr><th class="table-id">#</th><th>First Name</th><th>Last Name</th><th>Username</th><th>Email</th><th>Status</th></tr></thead><tbody><tr ng-repeat="item in peopleTableData"><td class="table-id">{{item.id}}</td><td>{{item.firstName}}</td><td>{{item.lastName}}</td><td>{{item.username}}</td><td><a class="email-link" ng-href="mailto:{{item.email}}">{{item.email}}</a></td><td><button class="status-button btn btn-xs btn-{{item.status}}">{{item.status}}</button></td></tr></tbody></table></div>'),
             e.put("app/pages/tables/widgets/contextualTable.html", '<table class="table"><tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th><th>Email</th><th>Age</th></tr><tr class="primary"><td>1</td><td>Mark</td><td>Otto</td><td>@mdo</td><td><a class="email-link" ng-href="mailto:mdo@gmail.com" href="mailto:mdo@gmail.com">mdo@gmail.com</a></td><td>28</td></tr><tr class="success"><td>2</td><td>Jacob</td><td>Thornton</td><td>@fat</td><td><a class="email-link" ng-href="mailto:fat@yandex.ru" href="mailto:fat@yandex.ru">fat@yandex.ru</a></td><td>45</td></tr><tr class="warning"><td>3</td><td>Larry</td><td>Bird</td><td>@twitter</td><td><a class="email-link" ng-href="mailto:twitter@outlook.com" href="mailto:twitter@outlook.com">twitter@outlook.com</a></td><td>18</td></tr><tr class="danger"><td>4</td><td>John</td><td>Snow</td><td>@snow</td><td><a class="email-link" ng-href="mailto:snow@gmail.com" href="mailto:snow@gmail.com">snow@gmail.com</a></td><td>20</td></tr><tr class="info"><td>5</td><td>Jack</td><td>Sparrow</td><td>@jack</td><td><a class="email-link" ng-href="mailto:jack@yandex.ru" href="mailto:jack@yandex.ru">jack@yandex.ru</a></td><td>30</td></tr></table>'),
-            e.put("app/pages/tables/widgets/editableRowTable.html", '<div class="add-row-editable-table"><button class="btn btn-primary" ng-click="addUser()">Add row</button></div><table class="table table-bordered table-hover table-condensed"><tr><td></td><td>Name</td><td>Status</td><td>Group</td><td>Actions</td></tr><tr ng-repeat="user in users" class="editable-row"><td>{{$index}}</td><td><span editable-text="user.name" e-name="name" e-form="rowform" e-required="">{{ user.name || \'empty\' }}</span></td><td class="select-td"><span editable-select="user.status" e-name="status" e-form="rowform" e-selectpicker="" e-ng-options="s.value as s.text for s in statuses">{{ showStatus(user) }}</span></td><td class="select-td"><span editable-select="user.group" e-name="group" onshow="loadGroups()" e-form="rowform" e-selectpicker="" e-ng-options="g.id as g.text for g in groups">{{ showGroup(user) }}</span></td><td><form editable-form="" name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user"><button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary editable-table-button btn-xs">Save</button> <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default editable-table-button btn-xs">Cancel</button></form><div class="buttons" ng-show="!rowform.$visible"><button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">Edit</button> <button class="btn btn-danger editable-table-button btn-xs" ng-click="removeUser($index)">Delete</button></div></td></tr></table>'),
+            e.put("app/pages/tables/widgets/editableRowTable.html", '<div  class="add-row-editable-table"><button class="btn btn-primary" ng-click="addUser()">Add row</button></div><table  class="table table-bordered table-hover table-condensed"><tr><td></td><td>Name</td><td>Status</td><td>Group</td><td>Actions</td></tr><tr ng-repeat="user in users" class="editable-row"><td>{{$index}}</td><td><span editable-text="user.name" e-name="name" e-form="rowform" e-required="">{{ user.name || \'empty\' }}</span></td><td class="select-td"><span editable-select="user.status" e-name="status" e-form="rowform" e-selectpicker="" e-ng-options="s.value as s.text for s in statuses">{{ showStatus(user) }}</span></td><td class="select-td"><span editable-select="user.group" e-name="group" onshow="loadGroups()" e-form="rowform" e-selectpicker="" e-ng-options="g.id as g.text for g in groups">{{ showGroup(user) }}</span></td><td><form editable-form="" name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline" shown="inserted == user"><button type="submit" ng-click="UpdateUser($index)" ng-disabled="rowform.$waiting" class="btn btn-primary editable-table-button btn-xs">Save</button> <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default editable-table-button btn-xs">Cancel</button></form><div class="buttons" ng-show="!rowform.$visible"><button class="btn btn-primary editable-table-button btn-xs" ng-click="rowform.$show()">Edit</button> <button class="btn btn-danger editable-table-button btn-xs" ng-click="removeUser($index)">Delete</button></div></td></tr></table>'),
+
+
+
+
             e.put("app/pages/tables/widgets/editableTable.html", '<div class="horizontal-scroll"><table class="table table-hover" st-table="editableTableData"><thead><tr class="sortable"><th class="table-id" st-sort="id" st-sort-default="true">#</th><th st-sort="firstName">First Name</th><th st-sort="lastName">Last Name</th><th st-sort="username">Username</th><th st-sort="email">Email</th><th st-sort="age">Age</th></tr></thead><tbody><tr ng-repeat="item in editableTableData" class="editable-tr-wrap"><td class="table-id">{{item.id}}</td><td><span editable-text="item.firstName" blur="cancel">{{item.firstName}}</span></td><td><span editable-text="item.lastName" blur="cancel">{{item.lastName}}</span></td><td><span editable-text="item.username" blur="cancel">{{item.username}}</span></td><td><a class="email-link" ng-href="mailto:{{item.email}}">{{item.email}}</a></td><td><span editable-text="item.age" blur="cancel">{{item.age}}</span></td></tr></tbody><tfoot><tr><td colspan="6" class="text-center"><div st-pagination="" st-items-by-page="12" st-displayed-pages="5"></div></td></tr></tfoot></table></div>'),
             e.put("app/pages/tables/widgets/hoverRows.html", '<div class="horizontal-scroll"><table class="table table-hover"><thead><tr class="black-muted-bg"><th class="browser-icons"></th><th>Browser</th><th class="align-right">Visits</th><th class="table-arr"></th><th class="align-right">Purchases</th><th class="table-arr"></th><th class="align-right">%</th><th class="table-arr"></th></tr></thead><tbody><tr ng-repeat="item in metricsTableData" class="no-top-border"><td><img ng-src="{{::( item.image | appImage )}}" width="20" height="20"></td><td ng-class="nowrap">{{item.browser}}</td><td class="align-right">{{item.visits}}</td><td class="table-arr"><i ng-class="{\'icon-up\': item.isVisitsUp, \'icon-down\': !item.isVisitsUp }"></i></td><td class="align-right">{{item.purchases}}</td><td class="table-arr"><i ng-class="{\'icon-up\': item.isPurchasesUp, \'icon-down\': !item.isPurchasesUp }"></i></td><td class="align-right">{{item.percent}}</td><td class="table-arr"><i ng-class="{\'icon-up\': item.isPercentUp, \'icon-down\': !item.isPercentUp }"></i></td></tr></tbody></table></div>'),
             e.put("app/pages/tables/widgets/responsiveTable.html", '<div class="table-responsive"><table class="table"><tr><th>#</th><th>First Name</th><th>Last Name</th><th>Username</th><th>Email</th><th>Age</th></tr><tr><td>1</td><td>Mark</td><td>Otto</td><td>@mdo</td><td><a class="email-link" ng-href="mailto:mdo@gmail.com" href="mailto:mdo@gmail.com">mdo@gmail.com</a></td><td>28</td></tr><tr><td>2</td><td>Jacob</td><td>Thornton</td><td>@fat</td><td><a class="email-link" ng-href="mailto:fat@yandex.ru" href="mailto:fat@yandex.ru">fat@yandex.ru</a></td><td>45</td></tr><tr><td>3</td><td>Larry</td><td>Bird</td><td>@twitter</td><td><a class="email-link" ng-href="mailto:twitter@outlook.com" href="mailto:twitter@outlook.com">twitter@outlook.com</a></td><td>18</td></tr><tr><td>4</td><td>John</td><td>Snow</td><td>@snow</td><td><a class="email-link" ng-href="mailto:snow@gmail.com" href="mailto:snow@gmail.com">snow@gmail.com</a></td><td>20</td></tr><tr><td>5</td><td>Jack</td><td>Sparrow</td><td>@jack</td><td><a class="email-link" ng-href="mailto:jack@yandex.ru" href="mailto:jack@yandex.ru">jack@yandex.ru</a></td><td>30</td></tr></table></div>'),
@@ -8287,4 +7901,67 @@ function() {
             e.put("app/pages/form/inputs/widgets/switches/switch.html", '<div ng-controller="SwitchDemoPanelCtrl as vm"><ba-switcher switcher-style="primary" switcher-value="vm.switches.s1"></ba-switcher><ba-switcher switcher-style="success" switcher-value="vm.switches.s2"></ba-switcher><ba-switcher switcher-style="warning" switcher-value="vm.switches.s3"></ba-switcher><ba-switcher switcher-style="danger" switcher-value="vm.switches.s4"></ba-switcher><ba-switcher switcher-style="info" switcher-value="vm.switches.s5"></ba-switcher></div>'),
             e.put("app/pages/form/inputs/widgets/tagsInput/tagsInput.html", '<div class="form-group"><div class="form-group"><input type="text" tag-input="primary" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput" placeholder="Add Tag"></div><div class="form-group"><input type="text" tag-input="warning" value="Minsk,Prague,Vilnius,Warsaw" data-role="tagsinput" placeholder="Add Tag"></div><div class="form-group"><input type="text" tag-input="danger" value="London,Berlin,Paris,Rome,Munich" data-role="tagsinput" placeholder="Add Tag"></div></div>')
     }]);
+
+function smartTableData() {
+    //$.getJSON("scripts/Function.php", function(result){
+    //var myJSON = JSON.stringify(result);
+    //smartTableData_val=myJSON.replace(/"(\w+)"\s*:/g, '$1:');
+    //smartTableData_val = result;
+    //smartTableData_val=[{"id":"1","firstName":"asd","lastName":"asd","username":"asd","email":"asd@asd.com","age":"12"},{"id":"2","firstName":"dfg","lastName":"dfg","username":"dfg","email":"dfg@dfg.com","age":"25"},{"id":"3","firstName":"qwe","lastName":"qwe","username":"qwe","email":"qwe@qwe.com","age":"45"}];
+    //});
+}
+
+function datatest() {
+
+    $.post(
+        "scripts/Function.php", {
+            table_name: 'smarttable'
+        },
+        function(result) {
+
+            smartTableData_val = result;
+
+        },
+        'json'
+    );
+
+
+    $.post(
+        "scripts/Function.php", {
+            table_name: 'user_data'
+        },
+        function(result) {
+
+            userData_val = result;
+
+        },
+        'json'
+    );
+
+
+    $.post(
+        "scripts/Function.php", {
+            table_name: 'chart_js'
+        },
+        function(result) {
+
+            count = result.length;
+
+            for (var i = 0; i < count; ++i) {
+                chartjs_labels.push(result[i].labels);
+                chartjs_data.push(result[i].data);
+            }
+
+            //console.log(chartjs_labels);
+
+        },
+        'json'
+    );
+
+
+}
+
+
+
+
 //# sourceMappingURL=../maps/scripts/app-641bb9edfa.js.map

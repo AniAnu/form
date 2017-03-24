@@ -10,6 +10,18 @@
 </head>
 
 <body>
+	<label>Background Color</label>
+  	<button id="frmb-0-save" class="btn-primary jscolor {valueElement:'chosen-value', onFineChange:'setbackColor(this)'}">
+		&nbsp;
+	</button>
+	<label>Font Color</label>
+	<button id="frmb-0-save" class="btn-primary jscolor {valueElement:'chosen-value', onFineChange:'setfontColor(this)'}">
+		&nbsp;
+	</button>
+	
+	<br>
+	
+  
   <div class="content">
     <div class="build-wrap"></div>
     <div class="render-wrap"></div>
@@ -19,6 +31,42 @@
   <script src="assets/js/form-builder.min.js"></script>
   <script src="assets/js/form-render.min.js"></script>
   <script src="assets/js/demo.js"></script>
+  
+  	<script src="jscolor.js"></script>
+
+	<script>
+	function setbackColor(picker) {
+		 $("#frmb-0-stage-wrap div").css("background-color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap li").css("background-color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap label").css("background-color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap a").css("background-color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap bottom").css("background-color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap text").css("background-color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap select").css("background-color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap input").css("background-color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap textarea").css("background-color", '#' + picker.toString()+" !important");
+	}
+	function setfontColor(picker) {
+		 $("#frmb-0-stage-wrap div").css("color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap li").css("color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap label").css("color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap a").css("color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap bottom").css("color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap text").css("color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap select").css("color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap input").css("color", '#' + picker.toString()+" !important");
+		 $("#frmb-0-stage-wrap textarea").css("color", '#' + picker.toString()+" !important");
+	}
+	$( "#frmb-0-stage-wrap" ).mouseup(function() {
+	
+       alert("123123");
+    
+	});
+	
+	
+	</script>
+
+  
 </body>
 
 </html>

@@ -50,6 +50,10 @@ body {
   display: block;
 }
 li,label, div, a, bottom, text, select ,textarea, input, button {
-	background-color: transparent !important;
+	background-color: transparent;
+	color: #fff;
+}
+#frmb-0-cb-wrap li, #frmb-0-cb-wrap label, #frmb-0-cb-wrap div, #frmb-0-cb-wrap a, #frmb-0-cb-wrap bottom, #frmb-0-cb-wrap text, #frmb-0-cb-wrap select ,#frmb-0-cb-wrap textarea, #frmb-0-cb-wrap input, button {
+	background-color: transparent;
 	color: #fff !important;
 }
